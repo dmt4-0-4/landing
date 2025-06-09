@@ -1,0 +1,66 @@
+@use 'kit/variables' as *;
+@use 'kit/mixins' as *;
+
+.video_highlight {
+    position: relative;
+    width: 100%;
+    height: auto;
+    @include flex-column(column);
+
+    .video_background {
+        position: absolute;
+        transform: rotate(-90deg);
+        height: 100vw;
+        width: 100vh;
+        object-fit: cover;
+        z-index: -1;
+        filter: brightness(0.8);
+    }
+
+    .video_h2 {
+        font-family: $h-font;
+        font-weight: 400;
+        font-size: 64px;
+        text-align: center;
+        color: $white;
+        margin-top: 67px;
+    }
+
+    .video_btn {
+        margin: 33px auto 80px;
+        @include flex-center;
+        width: 163px;
+        height: 163px;
+        border-radius: 50%;
+        background-color: $white;
+        border: none;
+        transition:
+            transform 0.3s ease,
+            background-color 0.3s ease;
+
+        .play_btn {
+            display: block;
+            font-size: 70px;
+            color: $bc-color;
+            transition: color 0.3s ease;
+        }
+
+        &:active {
+            background-color: $bc-color;
+            transform: scale(0.9);
+
+            .play_btn {
+                color: $white;
+            }
+        }
+    }
+
+    p {
+        font-family: $main-font;
+        font-weight: $main-weight;
+        font-size: 24px;
+        color: $white;
+        text-align: center;
+        max-width: 540px;
+    }
+}

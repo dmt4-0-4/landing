@@ -1,0 +1,127 @@
+@use 'kit/mixins' as *;
+@use 'kit/variables' as *;
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    #menu-toggle {
+        &:checked {
+            ~ .menu {
+                display: flex;
+            }
+
+            + .menu-toggle {
+                span {
+                    &:nth-child(1) {
+                        transform: rotate(45deg) translate(5px, 5px);
+                    }
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+                    &:nth-child(3) {
+                        transform: rotate(-45deg) translate(6px, -6px);
+                    }
+                }
+            }
+        }
+    }
+
+    nav {
+        padding: 0 20px;
+
+        .logo {
+            margin-left: 0;
+        }
+
+        ul.menu {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 84px;
+            left: 0;
+            width: 100%;
+            background-color: #ef8767;
+            padding: 20px 0;
+            margin: 0;
+            gap: 20px;
+
+            li {
+                a {
+                    font-size: 16px;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        padding: 0 20px;
+
+        .logo {
+            margin-left: 0%;
+        }
+
+        ul {
+            display: none;
+        }
+    }
+
+    .header_left_flower {
+        display: flex;
+        position: absolute;
+        width: 300px;
+        height: 400px;
+        transform: rotate(17deg);
+        top: 60px;
+        left: -180px;
+    }
+
+    .header_right_flower {
+        display: flex;
+        position: absolute;
+        width: 115px;
+        height: 250px;
+        transform: rotate(-43deg);
+        top: 330px;
+        right: -30px;
+    }
+
+    .header_line {
+        background-color: $bc-color;
+        position: relative;
+    }
+
+    .background {
+        display: none;
+    }
+
+    .circle {
+        all: unset;
+        @include flex-column(column);
+        text-align: center;
+
+        h1 {
+            color: $white;
+        }
+    }
+
+    .header_bottom {
+        width: 100%;
+        background: none;
+        color: $white;
+        padding: 0;
+        margin: 85px 0 100px 0;
+
+        p {
+            max-width: 340px;
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@use 'kit/mixins' as *;
+
+@media (max-width: 480px) {
+    footer {
+        .footer_content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+
+            .footer_logo {
+                order: -1;
+
+                img {
+                    margin-bottom: 5px;
+                }
+            }
+
+            .footer_column {
+                .left {
+                    text-align: center;
+                    min-width: unset;
+                    flex: unset;
+                    order: 2;
+                }
+                .right {
+                    text-align: center;
+                    min-width: unset;
+                    flex: unset;
+                    order: 3;
+                }
+            }
+        }
+    }
+}
