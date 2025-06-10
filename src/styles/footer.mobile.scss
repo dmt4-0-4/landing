@@ -2,14 +2,14 @@
 
 @media (max-width: 480px) {
     footer {
-        .footer_content {
+        .footer__content {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
             gap: 20px;
 
-            .footer_logo {
+            .footer__logo {
                 order: -1;
 
                 img {
@@ -17,7 +17,7 @@
                 }
             }
 
-            .footer_column {
+            .footer__column {
                 .left {
                     text-align: center;
                     min-width: unset;

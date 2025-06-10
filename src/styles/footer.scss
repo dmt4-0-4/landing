@@ -9,7 +9,7 @@ footer {
     font-family: $main-font;
     margin-top: 100px;
 
-    .footer_content {
+    .footer__content {
         display: flex;
         justify-content: space-evenly;
         align-items: end;
@@ -27,7 +27,7 @@ footer {
             line-height: 19px;
         }
 
-        .footer_column {
+        .footer__column {
             min-width: 200px;
 
             .left {
@@ -39,7 +39,7 @@ footer {
             }
         }
 
-        .footer_logo {
+        .footer__logo {
             flex: 1;
             min-width: 200px;
             display: flex;

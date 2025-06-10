@@ -1,13 +1,13 @@
 @use 'kit/variables' as *;
 @use 'kit/mixins' as *;
 
-.video_highlight {
+.stories__section {
     position: relative;
     width: 100%;
     height: auto;
     @include flex-column(column);
 
-    .video_background {
+    .stories__background {
         position: absolute;
         transform: rotate(-90deg);
         height: 100vw;
@@ -17,7 +17,7 @@
         filter: brightness(0.8);
     }
 
-    .video_h2 {
+    .stories__title {
         font-family: $h-font;
         font-weight: 400;
         font-size: 64px;
@@ -26,7 +26,7 @@
         margin-top: 67px;
     }
 
-    .video_btn {
+    .stories__btn {
         margin: 33px auto 80px;
         @include flex-center;
         width: 163px;
@@ -45,7 +45,7 @@
             transition: color 0.3s ease;
         }
 
-        &:active {
+        &:hover {
             background-color: $bc-color;
             transform: scale(0.9);
 

@@ -1,17 +1,17 @@
 @use 'kit/variables' as *;
 @use 'kit/mixins' as *;
 
-.headline {
+.about {
     position: relative;
     background-color: #ffe5e0;
     width: 100%;
     overflow: hidden;
 
-    .section_header {
+    .about__header {
         @include flex-column(column);
         z-index: 1;
 
-        .headline_h2 {
+        .about__title {
             max-width: 770px;
             font-family: $h-font;
             font-size: 60px;
@@ -32,7 +32,7 @@
         z-index: 1;
     }
 
-    .section_content {
+    .about__content {
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding: 60px 120px 0 120px;
@@ -70,7 +70,7 @@
     }
 }
 
-.left_flower {
+.about__flower--left {
     position: absolute;
     width: 370px;
     height: 490px;
@@ -79,7 +79,7 @@
     left: -230px;
     top: 78px;
 }
-.right_flower {
+.about__flower--right {
     position: absolute;
     width: 230px;
     height: 460px;
@@ -88,8 +88,8 @@
     right: -80px;
     top: 146px;
 }
-.left_flower,
-.right_flower,
+.about__flower--left,
+.about__flower--right,
 .headline_left_flower,
 .headline_right_flower {
     filter: brightness(0.6);
